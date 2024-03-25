@@ -1,0 +1,514 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background--color);
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}   
+
+
+
+header{
+    border: 1px solid rgb(226, 216, 216);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    z-index: 9999;
+}
+
+.header{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    display: none;
+}
+
+@media screen and (min-width: 952px){
+    .navbar{
+        display: flex;
+    }
+}
+
+.header nav, .contactinfo, .menubutton{
+    margin-top: 0.4rem;
+}
+
+.header nav a{
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1rem;
+    color: blue;
+}
+
+.header nav a:hover{
+    color: black;
+}
+
+.devinlogo{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.devinlogo h2{
+    font-size: 2rem;
+    font-weight:800;
+}
+
+@media screen and (max-width: 425px) {
+    .devinlogo h2{
+        font-size: 1.6rem;
+        font-weight:800;
+    }
+}
+
+.contactinfo{
+    display: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(67, 67, 240);
+}
+
+@media screen and (min-width: 952px){
+    .contactinfo{
+        display: flex;
+    }
+}
+
+.contactinfo:hover{
+    background-color: black;
+}
+
+.menubutton{
+    display: none;
+}
+
+#menuicon{
+    opacity: 1.7;
+    width: 2.5rem;
+    height: 2rem;
+}
+
+@media screen and (max-width: 951px){
+    .menubutton{
+        display: block;
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+
+/* Introduction styling starts from here*/
+
+.introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 3rem; /* Add padding to create space for the fixed header */
+  }
+  
+  @media screen and (max-width:952px)  {
+      .introduction {
+          display: flex;
+          gap: 3rem;
+          flex-direction: column;
+          align-items: center;
+      }
+  }
+
+.introdescription{
+    color: rgb(116, 106, 106);
+}
+
+.leftbox{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%); /* Start off-screen to the left */
+    }
+  }
+
+
+@media screen and (max-width:952px)  {
+    .leftbox{
+        width: 100%;
+    }
+}
+
+#title{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+#title h3{
+    color: rgb(76, 76, 215);
+}
+
+#buttons a{
+    border: 2px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+}
+
+#startnow{
+    background-color: rgb(81, 81, 242);
+}
+
+#taketour{
+    background-color: rgba(0, 0, 0, 0.758);
+}
+
+#devinimg{
+    width: 28rem;
+    height: 18rem;
+    animation: slideInFromRight 1s ease-out backwards;
+}
+
+@keyframes slideInFromRight {
+    from {
+      transform: translateX(100%); /* Start off-screen to the left */
+    }
+  }
+
+@media screen and (max-width:952px)  {
+    #devinimg{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.table_of_contents {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  @media screen and (max-width:768px) {
+    .table_of_contents {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+      }
+
+      .box2 #item1{
+         margin-top: 0;
+      }
+  }
+  
+  .content {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+  }
+
+  #contentlist, .content a{
+    color: rgb(6, 28, 230);
+  }
+  
+  .content li{
+    margin: 0.8rem;
+  }
+  
+ .content a:hover{
+    color: rgb(16, 16, 16);
+  }
+
+  .box1{
+    margin-left: 1rem;
+  }
+
+.maincontent{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.devinvideo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.devinvideo iframe{
+    width: 30rem;
+    height: 15rem;
+    border: 2px solid rgb(18, 17, 17);
+}
+
+#allaboutdevin{
+    text-align: center;
+    color: rgb(12, 12, 12);
+}
+
+.maincontent li{
+    list-style: none;
+    padding: 0.3rem;
+}
+
+.usagesteps{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.steps{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 230px));
+    column-gap: 3rem;
+    row-gap: 3rem;
+}
+
+@media screen and (max-width: 633px) {
+    .steps{
+        justify-content: center;
+    }
+    
+    .usagesteps h2{
+        text-align: center;
+    }
+}
+
+#step1, #step2, #step3, #step4, #step5, #step6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    border: 1px solid black;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 10px;
+    color: rgb(248, 244, 244);
+}
+
+.steps h4{
+    height: 10%;
+}
+
+#step1{
+    background-color: rgb(59, 204, 112);
+}
+
+#step2{
+    background-color: rgb(228, 144, 75);
+}
+#step3{
+    background-color: rgb(75, 131, 228);
+}
+#step4{
+    background-color: rgb(98, 205, 228);
+}
+#step5{
+    background-color: rgb(235, 105, 209);
+}
+#step6{
+    background-color: rgb(164, 117, 37);
+}
+
+.steps img{
+    width: 40%;
+    padding: 0.8rem;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 25%;
+}
+
+.differences{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media screen and (max-width:426px) {
+    #section3{
+        display: none;
+    }
+}
+
+.comparision{
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comparision li{
+    padding: 0.5rem;
+    margin-left: 2rem;
+}
+
+@media screen and (max-width:426px) {
+    .comparision{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.differences table td, th{
+    padding: 1rem;
+}
+
+.differences table {
+    width: 90%;
+}
+
+.differences th{
+    background-color: rgb(35, 33, 33);
+    color: white;
+}
+.differences tr{
+    background-color:ghostwhite;
+    color: rgb(3, 3, 3);
+}
+
+.performance{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.performance img{
+    width: 80%;
+    align-items: center;
+}
+
+.inshortaboutdevin{
+    width: 80%;
+    padding: 1rem;
+    border: 1px solid gray;
+    border-radius: 15px;
+    background-color: bisque;
+}
+
+@media screen and (max-width: 426px) {
+    .inshortaboutdevin{
+        width: 100%;
+    }
+}
+
+.inshortaboutdevin ul{
+    margin: 1rem;
+}
+
+.inshortaboutdevin ul li{
+    padding: 0.3rem;
+}
+
+.cards{
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 250px));
+    align-items: center;
+    gap: 2rem;
+}
+
+@media screen and (max-width:633px){
+    .advantages h2{
+        text-align: center;
+    }
+    .cards{
+        justify-content: center;
+    }
+
+    .performance{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+    height: 6rem;
+    width: 15rem;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: rgb(18, 18, 18);
+}
+
+.no1{
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+.no2{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+.no3{
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+.no4{
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+.no5{
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+#testimonials{
+    text-align: center;
+}
+
+.testimonials{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 310px));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.review{
+    margin-top: 1rem;
+    border: 1px solid gray;
+    width: 20rem;
+    border-radius: 10px 10px 0 0;
+}
+
+#reviewvideo{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.reviewdescription{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.5rem;
+}
