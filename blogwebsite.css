@@ -589,6 +589,12 @@ header{
     color: rgb(63, 63, 216);
 }
 
+@media screen and (max-width:470px) {
+    #send_button{
+        margin-top: 0.6rem;
+    }
+}
+
 #emailfield{
     border: 1px solid gray;
     width: 10rem;
